@@ -27,8 +27,8 @@ public class LoopsApp {
 	 */
 	public static void main(String[] args) {
 		AppBasics.greetUserAndGetName("Loops App");
-		// countNumbers();
-		// sortingNumbers();
+		countNumbers();
+		sortingNumbers();
 		gradeAverage();
 	}
 
@@ -59,17 +59,8 @@ public class LoopsApp {
 		}
 	}
 
-	/**
-	 * Write a method which prints the grade average for a user based on a user
-	 * supplied set of grade values. Repeat execution until user has no more
-	 * items to be graded. Use a do while for this exercise. You will also have
-	 * to use two variables to hold the current accumulated grade points as well
-	 * as the total number of grades entered so that the average will be
-	 * totalGradePoints / numTotalGrades. Other things covered in this exercise:
-	 * Scanner, Integer.parseInt.
-	 */
 	private static void gradeAverage() {
-		int totalNumGrades = AppBasics.requestInt("How many grades would you like to be calculated?", 1, 10,
+		int totalNumGrades = AppBasics.requestInt("\n\nHow many grades would you like to be calculated?", 1, 10,
 				"You must enter a valid number of grades to be calculated withing the range of 1 - 10.");
 		double totalPoints = 0;
 		int i = 1;
