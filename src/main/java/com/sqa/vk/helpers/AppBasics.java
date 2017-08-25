@@ -138,6 +138,31 @@ public class AppBasics {
 		return num;
 	}
 
+	public static int requestInt(String question, int min, int max, String errorMessage) {
+		int num = 0;
+		String input;
+		boolean isValid = false;
+		while (!isValid) {
+			System.out.print(question + " ");
+			input = scanner.nextLine();
+			try {
+				num = Integer.parseInt(input);
+				if (num > max) {
+					throw new RequestIntOverMaxException();
+				}
+				if (num < min) {
+					throw new RequestIntUnderMinException();
+				}
+				isValid = true;
+			} catch (NumberFormatException e) {
+				System.out.println("You did not supply a valid number [" + input + "]. please provide only digits.");
+			} catch (RequestIntOverMaxException | RequestIntUnderMinException e) {
+				System.out.println(errorMessage);
+			}
+		}
+		return num;
+	}
+
 	public static long requestLong(String question) {
 		String input;
 		long num = 0;
