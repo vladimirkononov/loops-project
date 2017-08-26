@@ -31,7 +31,7 @@ public class AppBasics {
 
 	public static String greetUserAndGetName(String appName) {
 		// Greet the user using a system out call
-		System.out.println("Hello there! Wellcome to the " + appName + " Application");
+		System.out.println("Wellcome to the " + appName + " Application");
 		// Ask the user for their name and store in a local scope String
 		// variable
 		// String userName = null;
