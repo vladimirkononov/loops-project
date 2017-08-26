@@ -30,15 +30,24 @@ public class MoreLoopingApp {
 	}
 
 	private static void threeLoops() {
-		// TODO Auto-generated method stub
+		for (int i = 6; i > 0; i--) {
+			for (int j = i; j > 1; j--) {
+				System.out.print(" ");
+			}
+			for (int k = 6 - i; k >= 0; k--) {
+				System.out.print("*");
+			}
+			System.out.println();
+		}
 	}
 
 	private static void twoLoops() {
-		for (int j = 0; j < 6; j++) {
-			System.out.println();
-			for (int i = 6; i > 0; i--) {
+		for (int i = 6; i > 0; i--) {
+			for (int j = 1; j <= i; j++) {
 				System.out.print("*");
 			}
+			System.out.println();
 		}
+		System.out.println();
 	}
 }
